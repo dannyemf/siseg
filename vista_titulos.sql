@@ -1,3 +1,4 @@
+DROP VIEW `vista_titulos`;
 CREATE VIEW `vista_titulos` AS
     select 
         `t`.`ide_titulo` AS `ide_titulo`,
@@ -14,4 +15,4 @@ CREATE VIEW `vista_titulos` AS
         `p`.`apellidos_exalumno` AS `apellidos_exalumno`
     from
         (`titulados` `t`
-        join `datospersonales` `p` ON ((`t`.`ide_exalumno` = `p`.`ide_exalumno`)))
+        join `datospersonales` `p` ON ((`t`.`ide_exalumno` = `p`.`ide_exalumno`)));
