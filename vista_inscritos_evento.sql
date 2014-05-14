@@ -1,3 +1,4 @@
+DROP VIEW `vista_inscritos_evento`;
 CREATE VIEW `vista_inscritos_evento` AS
     select 
         `r`.`id` AS `id`,
@@ -21,4 +22,4 @@ CREATE VIEW `vista_inscritos_evento` AS
         ((`r`.`ide_evento` = `e`.`id`)
             and (`r`.`ide_exalumno` = `d`.`ide_exalumno`)
             and (`r`.`ide_carrera` = `c`.`ide_carrera`))
-    order by `c`.`siglas_area` , `c`.`nombre_carrera` , `d`.`apellidos_exalumno` , `d`.`nombres_exalumno`
+    order by `c`.`siglas_area` , `c`.`nombre_carrera` , `d`.`apellidos_exalumno` , `d`.`nombres_exalumno`;
