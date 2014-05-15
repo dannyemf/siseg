@@ -11,11 +11,12 @@ CREATE VIEW vista_titulos AS
         t.fecha_graduacion AS fecha_graduacion,
         t.tema_tesis AS tema_tesis,
         t.titulado AS titulado,
+		t.estado,
         p.nombres_exalumno AS nombres_exalumno,
         p.apellidos_exalumno AS apellidos_exalumno,
 		c.nombre_carrera,
 		c.siglas_area
-    FROM
+	FROM
         titulados t JOIN datospersonales p ON t.ide_exalumno = p.ide_exalumno
 		JOIN carreras c ON t.ide_carrera = c.ide_carrera
 	ORDER BY
